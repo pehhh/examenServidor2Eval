@@ -12,16 +12,17 @@
       <a href="/insertarUsuario">Insertar Usuario</a>
       <a href="/listarUsuario">Listar Usuario</a>
       <a href="/insertarCoche">Insertar Coches</a>
-      <a href="/listarCoche"></a>
+      <a href="/listarCoche">Listar Coches</a>
     </nav>
     <% for(let i=0; i < data.length; i++){ %>
-      <h3> <%= data[i].username %> </h3>
+      <div>
+        <h3> <%= data[i].username %> </h3>
       <h3> <%= data[i].email %> </h3>
       <button> <a href="/editarUsuario/ <%= data[i].id %>">Editar </a></button>
       <button> <a href="/borrarUsuario/ <%= data[i].id %>">Borrar </a></button>
+      </div>
+      
     <% } %>
-    <div>
-      <h3> </h3>
-    </div>
+    
   </body>
 </html>

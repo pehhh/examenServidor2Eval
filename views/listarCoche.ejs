@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>appCoches</h1>
+    <h2>listarCoches</h2>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/insertarUsuario">Insertar Usuario</a>
+      <a href="/listarUsuario">Listar Usuario</a>
+      <a href="/insertarCoche">Insertar Coches</a>
+      <a href="/listarCoche">Listar Coches</a>
+    </nav>
+    <section>
+      <% for(let i=0; i < data.length; i++){ %>
+        <div>
+          <img src="<%= data[i].url %>" alt="coche">  
+          <h3> <%= data[i].marca %> </h3>
+          <h3> <%= data[i].modelo %> </h3>
+          
+          <button> <a href="/editarCoche/ <%= data[i].id %>">Editar </a></button>
+          <button> <a href="/borrarCoche/ <%= data[i].id %>">Borrar </a></button>
+        </div>
+      <% } %>
+      
+    </section>
+      
+    
+    
+    
+  </body>
+</html>

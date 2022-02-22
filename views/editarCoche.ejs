@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>appCoches</h1>
-    <h2>Insertar Usuario</h2>
+    <h2>Editar Coche</h2>
     <nav>
       <a href="/">Inicio</a>
       <a href="/insertarUsuario">Insertar Usuario</a>
@@ -14,20 +14,20 @@
       <a href="/insertarCoche">Insertar Coches</a>
       <a href="/listarCoche">Listar Coches</a>
     </nav>
-        <form action="/insertarUsuario" method="post">
+        <form action="/editarCoche/ <%= data.id %>" method="post">
           <p>
-            <label for="username">username</label><br>
-            <input type="text" name="username">
+            <label for="marca">marca</label><br>
+            <input type="text" name="marca" value="<%= data.marca %>">
           </p>
           <p>
-            <label for="password">password</label><br>
-            <input type="text" name="password">
+            <label for="modelo">modelo</label><br>
+            <input type="text" name="modelo" value="<%= data.modelo %>">
           </p>
           <p>
-            <label for="email">email</label><br>
-            <input type="text" name="email">
+            <label for="url">url</label><br>
+            <input type="text" name="url" value="<%= data.url %>">
           </p>
-          <input type="submit" value="Envia Datos">
+          <input type="submit" value="Modifica los datos">
         </form>
         
   </body>
