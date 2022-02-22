@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>appCoches</h1>
+    <h2>Editar Usuario</h2>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/insertarUsuario">Insertar Usuario</a>
+      <a href="/listarUsuario">Listar Usuario</a>
+      <a href="/insertarCoche">Insertar Coches</a>
+      <a href="/listarCoche"></a>
+    </nav>
+        <form action="/editarUsuario" method="post">
+          <p>
+            <label for="username">username</label><br>
+            <input type="text" name="username">
+          </p>
+          <p>
+            <label for="password">password</label><br>
+            <input type="text" name="password">
+          </p>
+          <p>
+            <label for="email">email</label><br>
+            <input type="text" name="email">
+          </p>
+          <input type="submit" value="Envia Datos">
+        </form>
+        
+  </body>
+</html>
