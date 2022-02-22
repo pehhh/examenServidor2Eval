@@ -9,10 +9,17 @@
     <h2>Insertar Usuario</h2>
     <nav>
       <a href="/">Inicio</a>
-      <a href="/insertarUsuario">Insertar Usuario</a>
-      <a href="/listarUsuario">Listar Usuario</a>
+      <% if(!user){ %>
+        <a href="/insertarUsuario">Insertar Usuario</a>
+        <a href="/listarUsuario">Listar Usuario</a>
+        <a href="/login">Login</a>
+        <% }%>
+      
+      <% if(user){ %>
       <a href="/insertarCoche">Insertar Coches</a>
       <a href="/listarCoche">Listar Coches</a>
+      <a href="/logout">Logout</a>
+      <% }%>
     </nav>
         <form action="/insertarUsuario" method="post">
           <p>

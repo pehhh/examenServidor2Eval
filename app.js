@@ -5,7 +5,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const passport = require('passport')
-//require('./passport')
+require('./passport')
 const session= require('express-session')
 const mysqlSession=require('express-mysql-session')
 var indexRouter = require('./routes/index');
