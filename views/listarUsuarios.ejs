@@ -17,8 +17,8 @@
     <% for(let i=0; i < data.length; i++){ %>
       <h3> <%= data[i].username %> </h3>
       <h3> <%= data[i].email %> </h3>
-      <button> <a href="/editar/ <%= data[i].id %>">Editar </a></button>
-      <button> <a href="/editar/ <%= data[i].id %>">Editar </a></button>
+      <button> <a href="/editarUsuario/ <%= data[i].id %>">Editar </a></button>
+      <button> <a href="/borrarUsuario/ <%= data[i].id %>">Borrar </a></button>
     <% } %>
     <div>
       <h3> </h3>

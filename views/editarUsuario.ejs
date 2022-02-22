@@ -14,20 +14,16 @@
       <a href="/insertarCoche">Insertar Coches</a>
       <a href="/listarCoche"></a>
     </nav>
-        <form action="/editarUsuario" method="post">
+        <form action="/editarUsuario/ <%= data.id %>" method="post">
           <p>
             <label for="username">username</label><br>
-            <input type="text" name="username">
-          </p>
-          <p>
-            <label for="password">password</label><br>
-            <input type="text" name="password">
+            <input type="text" name="username" value="<%= data.username %>">
           </p>
           <p>
             <label for="email">email</label><br>
-            <input type="text" name="email">
+            <input type="text" name="email" value="<%= data.email %>">
           </p>
-          <input type="submit" value="Envia Datos">
+          <input type="submit" value="Modifica los datos">
         </form>
         
   </body>
