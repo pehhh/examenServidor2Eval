@@ -4,12 +4,35 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const passport = require('passport')
+//require('./passport')
+const session= require('express-session')
+const mysqlSession=require('express-mysql-session')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+app.use(session({
+  secret:'perele',
+  resave:false,
+  saveUninitialized:false,
+  store: new mysqlSession({
+    host:process.env.DES_HOST,
+    user:process.env.DES_USER,
+    password:process.env.DES_PASS,
+    database:process.env.DES_DB
+  })
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use((req,res,next)=>{
+  app.locals.user=req.user
+  next()
+})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
